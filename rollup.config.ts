@@ -3,9 +3,9 @@ import type { RollupOptions } from "rollup";
 
 import typescript from "@rollup/plugin-typescript";
 // The @rollup/plugin-node-resolve plugin teaches Rollup how to find external modules.
-import resolve from "@rollup/plugin-node-resolve";
+// import resolve from "@rollup/plugin-node-resolve";
 // To generate a minified bundle with terser
-import terser from "@rollup/plugin-terser";
+// import terser from "@rollup/plugin-terser";
 
 const config: RollupOptions[] = [
   {
