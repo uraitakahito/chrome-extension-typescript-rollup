@@ -5,7 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "npm run rmdir dist node_modules",
+    "cleandep": "npm run rmdir node_modules",
+    "rmdir": "node -e \"var fs = require('fs'); try{process.argv.slice(1).map((fpath) => fs.rmdirSync(fpath, { recursive: true }))}catch(err){console.log(err)}; process.exit(0);\"",
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "start": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --watch"
   },
   "keywords": [],
   "author": "",
