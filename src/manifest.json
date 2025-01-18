@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./hello.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["http://abehiroshi.la.coocan.jp/*"]
+    }
+  ]
+}
